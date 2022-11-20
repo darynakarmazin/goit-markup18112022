@@ -16,13 +16,15 @@
   --accent-blue-color: #2196f3;
   --grey-background-color: #f5f4fa;
   --black-background-color: #2f303a;
+  --white-background-color: rgba(255, 255, 255, 1);
+  --grey-background-color: rgba(245, 244, 250, 1);
   --text-footer-color: rgba(255, 255, 255, 0.6);
 }
 .list {
   list-style: none;
 }
 body {
-  background-color: var(--text-white-color);
+  background-color: var(--twhite-background-color);
   color: var(--text-gray-color);
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
@@ -77,6 +79,7 @@ body {
   text-transform: uppercase;
 }
 .button {
+  font-family: inherit;
   color: var(--text-white-color);
   background-color: var(--accent-blue-color);
   font-weight: 700;
@@ -87,12 +90,18 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
 }
-button{
-    cursor: pointer;
+.button:hover,
+.button:focus {
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+button {
+  cursor: pointer;
 }
 /* Тимчасовий фон героя */
-.hero{
-    background-color: var(--black-background-color)
+.hero {
+  background-color: var(--black-background-color);
 }
 /* Section */
 .section-title {
@@ -125,12 +134,19 @@ button{
   line-height: 1.19;
   text-align: center;
 }
+.team-list .card{
+  background-color: var(--text-white-color);
+}
+/* Тимчасовий фон секції Наша команда */
+.team-list {
+  background-color: var(--grey-background-color);
+}
 .logo-footer {
   color: var(--text-white-color);
 }
 .adress-footer {
   color: var(--text-white-color);
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -140,7 +156,7 @@ button{
 }
 .contact-footer {
   color: var(--text-footer-color);
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -148,12 +164,17 @@ button{
   letter-spacing: 0.03em;
   text-decoration: none;
 }
+.adress:hover,
+.adress:focus{
+  color: var(--accent-blue-color);
+}
 /* Тимчасовий фон фурера */
-.footer{
-    background-color: var(--black-background-color)
+.footer {
+  background-color: var(--black-background-color);
 }
 /* Сторінка портфоліо */
 .button-navigation {
+  font-family: inherit;
   color: var(--text-black-color);
   background-color: var(--grey-background-color);
   font-weight: 500;
@@ -178,9 +199,18 @@ button{
   font-size: 16px;
   line-height: 1.88;
 }
-.works-list .link{
-    text-decoration: none;
+.works-list .link {
+  text-decoration: none;
 }
-.hidden-title{
-    display: none;
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
